@@ -45,3 +45,15 @@ const mysch = {
 }
 
 console.log(sch.validate(mysch))
+
+const email = joi.object({
+  email : joi.string().email().required(),
+  pass : joi.string().pattern(new RegExp("(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#$*(){}]).{8,}$")).required(),
+})
+
+const temp_em = {
+  email : "abcd@abcd.com",
+  pass : "Aa!1qweqwe",
+}
+
+console.log(email.validate(temp_em))
