@@ -33,3 +33,11 @@
 
 //regex for basic email format    -> (?<unique_username>[a-z0-9].*\.?[a-z0-9].*)(?<domain>@[a-z].*)(?<TLD>\.(com|edu|in))
 //regex for basic password format -> (?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#$*(){}]).{8,}$
+
+
+
+const email = "mugesh.s@rently.com"
+const password = "ABCD@!12304"
+
+const em_regex = new RegExp("[a-z0-9].*\.?[a-z0-9].*@[a-z].*\.com$");
+console.log(em_regex.test(email))
